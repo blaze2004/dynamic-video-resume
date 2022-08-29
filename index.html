@@ -266,6 +266,12 @@
             personal_details = document.getElementById('personal_skills');
             technical_details = document.getElementById('technical_skills');
             contact_info = document.getElementById('contact_info');
+            var api_key = document.getElementById('api_key').value;
+            
+            if (api_key == null || api_key == '' || api_key == undefined){
+                alert("Fill all the fields.");
+                return;
+            }
 
             if (user_name.value != null && user_name.value != '' && user_name.value != undefined) {
                 full_name = user_name.value;
@@ -319,7 +325,6 @@
                 }, ]
             }
 
-            var api_key = document.getElementById('api_key').value;
             document.getElementById('loading').style.height == "100%";
             $.ajax({
                 url: "https://api.shotstack.io/stage/templates/render",
