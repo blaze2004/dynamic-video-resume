@@ -7,4 +7,4 @@ Create video resume which updates itself with changes in your text resume.
 - Fill other details and hit create.
 - Wait for the video to be generated.
 
-![](https://github.com/blaze2004/dynamic-video-resume/blob/main/demo.mp4)
+[video](https://github.com/blaze2004/dynamic-video-resume/blob/main/demo.mp4)
