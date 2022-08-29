@@ -1,0 +1,240 @@
+{
+    "timeline": {
+        "background": "#000000",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>{{name}}</p>",
+                            "height": 269,
+                            "width": 466,
+                            "css": "p{color: #ed1b38;font-size:87px;font-weight:bold;}"
+                        },
+                        "start": 0,
+                        "length": 5,
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.233,
+                            "y": -0.132
+                        },
+                        "fit": "none",
+                        "transition": {
+                            "in": "slideRight",
+                            "out": "slideLeft"
+                        },
+                        "position": "center"
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>Technical Skills</p>",
+                            "height": 78,
+                            "width": 141,
+                            "css": "p{\nfont-size: 25px;\ncolor: #0d2c54;\nfont-weight:bold;\n}"
+                        },
+                        "start": 5,
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.393,
+                            "y": 0.339
+                        },
+                        "transition": {
+                            "in": "slideRight",
+                            "out": "slideLeft"
+                        },
+                        "length": 6,
+                        "position": "center"
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>Personal Skills</p>",
+                            "height": 78,
+                            "width": 133,
+                            "css": "p{\nfont-size: 25px;\ncolor: #0d2c54;\nfont-weight:bold;\n}"
+                        },
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.396,
+                            "y": 0.339
+                        },
+                        "position": "center",
+                        "transition": {
+                            "in": "slideRight",
+                            "out": "slideLeft"
+                        },
+                        "length": 6,
+                        "start": 11
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>Contact Info</p>",
+                            "height": 78,
+                            "width": 131,
+                            "css": "p{\nfont-size: 25px;\ncolor: #0d2c54;\nfont-weight:bold;\n}"
+                        },
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.394,
+                            "y": 0.339
+                        },
+                        "position": "center",
+                        "transition": {
+                            "in": "slideRight",
+                            "out": "slideLeft"
+                        },
+                        "length": 6,
+                        "start": 17.01
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<ul>\n{{technical_skills}}\n</ul>",
+                            "height": 392,
+                            "width": 638,
+                            "css": "ul {\nmargin: 0; \npadding: 0;\nfont-size: 40px;\ncolor: white;\n}"
+                        },
+                        "start": 5,
+                        "length": 6,
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.151,
+                            "y": -0.058
+                        },
+                        "transition": {
+                            "in": "wipeRight",
+                            "out": "wipeLeft"
+                        },
+                        "position": "left"
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<ul>\n{{personal_skills}}\n</ul>",
+                            "height": 392,
+                            "width": 638,
+                            "css": "ul {\nmargin: 0; \npadding: 0;\nfont-size: 40px;\ncolor: white;\n}"
+                        },
+                        "length": 6,
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": -0.151,
+                            "y": -0.058
+                        },
+                        "transition": {
+                            "in": "wipeRight",
+                            "out": "wipeLeft"
+                        },
+                        "start": 11,
+                        "position": "left"
+                    },
+                    {
+                        "asset": {
+                            "type": "html",
+                            "html": "<p>\nFeel free to contact me at {{contact_info}}\n</p>",
+                            "height": 180,
+                            "width": 652,
+                            "css": "p{\ncolor: red;\nfont-size: 48px;\ncolor: white;\n}"
+                        },
+                        "length": 6,
+                        "fit": "none",
+                        "scale": 1,
+                        "offset": {
+                            "x": 0.041,
+                            "y": -0.029
+                        },
+                        "position": "center",
+                        "transition": {
+                            "in": "wipeRight",
+                            "out": "wipeLeft"
+                        },
+                        "start": 17
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://github.com/blaze2004/dynamic-video-resume/blob/main/name.mp4?raw=true"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "position": "center",
+                        "length": 5,
+                        "start": 0,
+                        "fit": "crop",
+                        "scale": 1
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://github.com/blaze2004/dynamic-video-resume/blob/main/base.mp4?raw=true"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "position": "center",
+                        "start": 5,
+                        "fit": "crop",
+                        "scale": 1,
+                        "length": 6
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://github.com/blaze2004/dynamic-video-resume/blob/main/base.mp4?raw=true"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "position": "center",
+                        "start": 11,
+                        "fit": "crop",
+                        "scale": 1,
+                        "length": 6
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://github.com/blaze2004/dynamic-video-resume/blob/main/base.mp4?raw=true"
+                        },
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "position": "center",
+                        "start": 17,
+                        "fit": "crop",
+                        "scale": 1,
+                        "length": 6
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}

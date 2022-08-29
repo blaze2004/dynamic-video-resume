@@ -1,0 +1,348 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Dynamic resume generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+</head>
+
+<body>
+    <h1>Dynamic Video Resume Generator</h1>
+    <p>Enter your details below and hit create.</p>
+    <div style="margin: 1%;padding: 1%;" name="info_form">
+        <div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="api_key_label">Api Key</span>
+                <input type="password" class="form-control" id="api_key" placeholder="Your shotstack stage api key" aria-label="Api key" aria-describedby="api_key_label">
+            </div>
+        </div>
+        <div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="Full_Name">Full Name</span>
+                <input type="text" class="form-control" id="name" placeholder="Full Name" aria-label="Full Name" aria-describedby="Full_Name">
+            </div>
+        </div>
+        <div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="contact_email">Email</span>
+                <input type="email" class="form-control" id="contact_info" placeholder="Contact email" aria-label="Contact email" aria-describedby="contact_email">
+            </div>
+        </div>
+        <div>
+            <div>
+                <select id="technical_skills" class="details_list" placeholder="Select upto 5 technical skills" multiple>
+                    <option value="C/C++ ">C/C++</option>
+                    <option value="C# ">C#</option>
+                    <option value="Java ">Java</option>
+                    <option value="JavaScript ">JavaScript</option>
+                    <option value="Perl ">Perl</option>
+                    <option value="PHP ">PHP</option>
+                    <option value="Python ">Python</option>
+                    <option value="Swift ">Swift</option>
+                    <option value="Go ">Go</option>
+                    <option value="SQL ">SQL</option>
+                    <option value="R ">R</option>
+                    <option value="Ruby ">Ruby</option>
+                    <option value="HTML ">HTML</option>
+                    <option value="Google Suite (Docs, Sheets, Slides, Forms) ">Google Suite (Docs, Sheets, Slides, Forms)</option>
+                    <option value="Trello ">Trello</option>
+                    <option value="Slack ">Slack</option>
+                    <option value="Zapier ">Zapier</option>
+                    <option value="Zoom ">Zoom</option>
+                    <option value="JIRA ">JIRA</option>
+                    <option value="Salesforce ">Salesforce</option>
+                    <option value="Budget planning ">Budget planning</option>
+                    <option value="Risk management ">Risk management</option>
+                    <option value="Project planning ">Project planning</option>
+                    <option value="PM tools (JIRA, Trello, Monday.com) ">PM tools (JIRA, Trello, Monday.com)</option>
+                    <option value="Task management ">Task management</option>
+                    <option value="SCRUM methodology ">SCRUM methodology</option>
+                    <option value="Agile methodology ">Agile methodology</option>
+                    <option value="Product roadmaps ">Product roadmaps</option>
+                    <option value="User experience design ">User experience design</option>
+                    <option value="Programming skills ">Programming skills</option>
+                    <option value="Product lifecycle management ">Product lifecycle management</option>
+                    <option value="QA testing ">QA testing</option>
+                    <option value="Requirements gathering ">Requirements gathering</option>
+                    <option value="Coding ">Coding</option>
+                    <option value="Debugging ">Debugging</option>
+                    <option value="Implementation ">Implementation</option>
+                    <option value="Testing ">Testing</option>
+                    <option value="Design ">Design</option>
+                    <option value="Configuration ">Configuration</option>
+                    <option value="Applications ">Applications</option>
+                    <option value="IOS/Android ">IOS/Android</option>
+                    <option value="Languages ">Languages</option>
+                    <option value="Security ">Security</option>
+                    <option value="Algorithms ">Algorithms</option>
+                    <option value="Modeling ">Modeling</option>
+                    <option value="Documentation ">Documentation</option>
+                    <option value="Adobe creative apps ">Adobe creative apps</option>
+                    <option value="Interactive media ">Interactive media</option>
+                    <option value="Wireframing ">Wireframing</option>
+                    <option value="UX research ">UX research</option>
+                    <option value="Prototyping ">Prototyping</option>
+                    <option value="Color theory ">Color theory</option>
+                    <option value="Responsive design ">Responsive design</option>
+                    <option value="Photoshop ">Photoshop</option>
+                    <option value="Sketch ">Sketch</option>
+                    <option value="User modeling ">User modeling</option>
+                    <option value="Search Engine Optimization (SEO) ">Search Engine Optimization (SEO)</option>
+                    <option value="Digital media ">Digital media</option>
+                    <option value="Social media platforms (Twitter, Facebook, Instagram) ">Social media platforms (Twitter, Facebook, Instagram)</option>
+                    <option value="Automated marketing software ">Automated marketing software</option>
+                    <option value="Content Management Systems (CMS) ">Content Management Systems (CMS)</option>
+                    <option value="Copywriting ">Copywriting</option>
+                    <option value="Content creation ">Content creation</option>
+                    <option value="Google Analytics ">Google Analytics</option>
+                    <option value="Marketing analytics tools ">Marketing analytics tools</option>
+                    <option value="Medical billing ">Medical billing</option>
+                    <option value="Medical coding ">Medical coding</option>
+                    <option value="Electronic medical record software ">Electronic medical record software</option>
+                    <option value="Sonography ">Sonography</option>
+                    <option value="Certifications ">Certifications</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div style="padding-top: 1.5%;">
+                <select id="personal_skills" class="details_list" placeholder="Select up to 5 personal skills" multiple>
+                    <option value="Able">Able</option>
+                    <option value="Adventurous">Adventurous</option>
+                    <option value="Ambitious">Ambitious</option>
+                    <option value="Bossy">Bossy</option>
+                    <option value="Brave">Brave</option>
+                    <option value="Bright">Bright</option>
+                    <option value="Busy">Busy</option>
+                    <option value="Cheerful">Cheerful</option>
+                    <option value="Compassionate">Compassionate</option>
+                    <option value="Conceited">Conceited</option>
+                    <option value="Considerate">Considerate</option>
+                    <option value="Cooperative">Cooperative</option>
+                    <option value="Courageous">Courageous</option>
+                    <option value="Creative">Creative</option>
+                    <option value="Curious">Curious</option>
+                    <option value="Dainty">Dainty</option>
+                    <option value="Daring">Daring</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Demanding">Demanding</option>
+                    <option value="Disagreeable">Disagreeable</option>
+                    <option value="Dreamer">Dreamer</option>
+                    <option value="Dreamer">Dreamer</option>
+                    <option value="Energetic">Energetic</option>
+                    <option value="Excited">Excited</option>
+                    <option value="Expert">Expert</option>
+                    <option value="Fancy">Fancy</option>
+                    <option value="Fighter">Fighter</option>
+                    <option value="Friendly">Friendly</option>
+                    <option value="Fun-loving">Fun-loving</option>
+                    <option value="Funny">Funny</option>
+                    <option value="Gentle">Gentle</option>
+                    <option value="Handsome">Handsome</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Hard-working">Hard-working</option>
+                    <option value="Helpful">Helpful</option>
+                    <option value="Helpful">Helpful</option>
+                    <option value="Honest">Honest</option>
+                    <option value="Humble">Humble</option>
+                    <option value="Humorous">Humorous</option>
+                    <option value="Humorous">Humorous</option>
+                    <option value="Imaginative">Imaginative</option>
+                    <option value="Impulsive">Impulsive</option>
+                    <option value="Independent">Independent</option>
+                    <option value="Intelligent">Intelligent</option>
+                    <option value="Inventive">Inventive</option>
+                    <option value="Joyful">Joyful</option>
+                    <option value="Keen">Keen</option>
+                    <option value="Lazy">Lazy</option>
+                    <option value="Lazy">Lazy</option>
+                    <option value="Leader">Leader</option>
+                    <option value="Light">Light</option>
+                    <option value="Lovable">Lovable</option>
+                    <option value="Loyal">Loyal</option>
+                    <option value="Messy">Messy</option>
+                    <option value="Mischievous">Mischievous</option>
+                    <option value="Neat">Neat</option>
+                    <option value="Patriotic">Patriotic</option>
+                    <option value="Pitiful">Pitiful</option>
+                    <option value="Plain">Plain</option>
+                    <option value="Plain">Plain</option>
+                    <option value="Pleasing">Pleasing</option>
+                    <option value="Poor">Poor</option>
+                    <option value="Popular">Popular</option>
+                    <option value="Pretty">Pretty</option>
+                    <option value="Prim">Prim</option>
+                    <option value="Proper">Proper</option>
+                    <option value="Proud">Proud</option>
+                    <option value="Quiet">Quiet</option>
+                    <option value="Reserved">Reserved</option>
+                    <option value="Responsible">Responsible</option>
+                    <option value="Rich">Rich</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Self-confident">Self-confident</option>
+                    <option value="Selfish">Selfish</option>
+                    <option value="Serious">Serious</option>
+                    <option value="Short">Short</option>
+                    <option value="Shy">Shy</option>
+                    <option value="Simple">Simple</option>
+                    <option value="Simple-minded">Simple-minded</option>
+                    <option value="Smart">Smart</option>
+                    <option value="Strong">Strong</option>
+                    <option value="Studious">Studious</option>
+                    <option value="Successful">Successful</option>
+                    <option value="Tall">Tall</option>
+                    <option value="Thoughtful">Thoughtful</option>
+                    <option value="Thrilling">Thrilling</option>
+                    <option value="Timid">Timid</option>
+                    <option value="Tireless">Tireless</option>
+                    <option value="Ugly">Ugly</option>
+                    <option value="Unselfish">Unselfish</option>
+                    <option value="Wild">Wild</option>
+                    <option value="Witty">Witty</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="padding-top: 1.5%;">
+            <button type="button" id="create" class="btn btn-primary">Create</button>
+        </div>
+    </div>
+
+    <div style="padding: 2%;">
+        <video id="output" src="" width="350" height="200" controls loop></video>
+    </div>
+
+    <div id="loading" style="height: 0%;width: 100%;position: fixed;z-index: 1;left: 0;top: 0;background-color: rgba(0,0,0, 0.9);overflow-x: hidden;transition: 0.5s;display: flex;flex-direction: column;justify-content: space-around;">
+        <div style="text-align: center;">
+            <div class="spinner-border text-primary" role="status">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            var details_list = new Choices('.details_list', {
+                removeItemButton: true,
+                maxItemCount: 5,
+                searchResultLimit: 5,
+                renderChoiceLimit: 5
+            });
+
+        });
+
+        function set_video(id, api_key) {
+
+            $.ajax({
+                url: "https://api.shotstack.io/stage/render/" + id,
+                type: "GET",
+                headers: {
+                    'Accept': 'application/json',
+                    'x-api-key': api_key
+                },
+                success: function(res) {
+                    if (res.response.status != "done") {
+                        setTimeout(set_video, 3000, id, api_key);
+                    }
+                    var video = document.getElementById('output');
+                    video.src = res.response.url;
+                    document.getElementById('loading').style.height == "0%";
+                    document.getElementById('loading').style.display == "block";
+
+                },
+                error: function(res) {
+                    alert("Error creating resume, try again.");
+                }
+            });
+        }
+
+        function create_video() {
+            user_name = document.getElementById("name");
+            personal_details = document.getElementById('personal_skills');
+            technical_details = document.getElementById('technical_skills');
+            contact_info = document.getElementById('contact_info');
+
+            if (user_name.value != null && user_name.value != '' && user_name.value != undefined) {
+                full_name = user_name.value;
+            } else {
+                alert("Fill all the fields.");
+                return;
+            }
+
+            if (personal_details.value != null && personal_details.value != '' && personal_details.value != undefined && personal_details.value.length != 0) {
+                personal_details_data = '';
+                for (const skill of personal_details) {
+                    personal_details_data += '<li>' + skill.value + '</li>';
+                }
+
+            } else {
+                alert("Fill all the fields.");
+                return;
+            }
+
+            if (technical_details.value != null && technical_details.value != '' && technical_details.value != undefined && technical_details.value.length != 0) {
+                technical_details_data = '';
+                for (const skill of technical_details) {
+                    technical_details_data += '<li>' + skill.value + '</li>';
+                }
+            } else {
+                alert("Fill all the fields.");
+                return;
+            }
+
+            if (contact_info.value != null && contact_info.value != "" && contact_info.value != undefined) {
+                contact_info_data = contact_info.value;
+            } else {
+                alert("Fill all the fields.");
+                return;
+            }
+
+            body = {
+                id: "2b2990c1-f305-4dfe-875a-8a60951e1afc",
+                merge: [{
+                    find: "name",
+                    replace: full_name
+                }, {
+                    find: "technical_skills",
+                    replace: technical_details_data
+                }, {
+                    find: "personal_skills",
+                    replace: personal_details_data
+                }, {
+                    find: "contact_info",
+                    replace: contact_info_data
+                }, ]
+            }
+
+            var api_key = document.getElementById('api_key').value;
+            document.getElementById('loading').style.height == "100%";
+            $.ajax({
+                url: "https://api.shotstack.io/stage/templates/render",
+                type: "POST",
+                data: JSON.stringify(body),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'x-api-key': api_key
+                },
+                success: function(res) {
+                    setTimeout(set_video, 5000, res.response.id, api_key);
+                },
+                error: function(res) {
+                    alert("Error creating video, try again.");
+                }
+            });
+        }
+
+        var create = document.getElementById("create");
+
+        create.addEventListener('click', create_video);
+    </script>
+</body>
+
+</html>
