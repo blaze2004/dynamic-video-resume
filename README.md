@@ -1,2 +1,2 @@
-# dynamic-video-resume
+# Dynamic video resume
 Create video resume which updates itself with changes in your text resume.
